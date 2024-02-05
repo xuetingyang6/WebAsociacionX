@@ -1,0 +1,44 @@
+#introduccion {
+    grid-column: 3 / 9;
+    grid-row: 1;
+}
+
+#introduccion p {
+    width: 60%;
+    margin: 2vw 10vw 5vw 10vw;
+}
+
+#contenido {
+    grid-column: 3 / 9;
+    grid-row: 2;
+}
+
+ul {
+    list-style: none;
+    
+}
+
+ul li {
+    display: inline-block;
+    width: 30%;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#calendario {
+    grid-column: 3 / 9;
+    grid-row: 3 ;
+}
+
+table {
+    border-style: dashed;
+    border-collapse: collapse;
+}
+
+td {
+    border-style: dotted;
+    
+}
