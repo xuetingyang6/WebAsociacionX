@@ -43,6 +43,15 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: goldenrod;
+    background-color:aliceblue;
+}
+
+a:visited {
+    color: black;
+}
+
 main {
     grid-column: 2 / 10;
     grid-row: 2 ;

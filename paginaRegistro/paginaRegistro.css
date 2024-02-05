@@ -1,1 +1,14 @@
- 
+section#formulario {
+    grid-column: 3 / 6;
+    grid-row: 1;
+}
+
+
+label {
+    display: inline-block;
+    width: 10vw;
+}
+
+label, input {
+    margin-bottom: 5px;
+}
