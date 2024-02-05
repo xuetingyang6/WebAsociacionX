@@ -15,7 +15,7 @@ body {
 
 header {
     position:fixed;
-    width: 80%;
+    width: 100%;
     margin: 2vh auto;
     /*
     grid-column: 2 / 9;
@@ -23,6 +23,25 @@ header {
     */
 }
 
+nav {
+    position:fixed;
+    width: 70%;
+    margin: 5% 25%;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    width: 20%;
+}
+
+ul {
+    list-style: none;  
+}
+
+a {
+    text-decoration: none;
+}
 
 main {
     grid-column: 2 / 10;
@@ -31,6 +50,7 @@ main {
     grid-template-columns: repeat(10, 1fr);
     grid-gap: 10vh;
     grid-auto-rows: minmax(10px, auto);
+    margin-top: 15%;
 }
 
 footer {

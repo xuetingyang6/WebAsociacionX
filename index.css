@@ -13,19 +13,15 @@
     grid-row: 2;
 }
 
-ul {
-    list-style: none;
-    
-}
-
-ul li {
+#contenido ul li {
     display: inline-block;
     width: 30%;
-    margin: 5px;
+    margin: 10px;
 }
 
-a {
-    text-decoration: none;
+article {
+    text-align: justify;
+    height: 20%;
 }
 
 #calendario {
