@@ -1,6 +1,12 @@
+section#entrante {
+    grid-column: 3 / 9;
+    grid-row: 1;
+    text-align: justify;
+}
+
 section#formulario {
     grid-column: 3 / 6;
-    grid-row: 1;
+    grid-row: 2;
 }
 
 
