@@ -26,6 +26,9 @@ nav {
     margin: 5% 10%;
     padding: 5%;
     background-color: antiquewhite;
+    text-shadow: 1px 5px 5px gray;
+    font-size: larger;
+    font-weight: bolder;
     
 }
 
