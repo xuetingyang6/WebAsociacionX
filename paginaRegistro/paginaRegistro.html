@@ -3,74 +3,109 @@
   <head>
     <meta charset="utf-8">
     <meta name="author" content="xuetingyang">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../layout.css">
+    <link rel="stylesheet" href="./paginaRegistro.css">
     <script type="text/javaScript" src="./paginaRegistro.js"></script>
-    <script type="text/javascript" src="./registro.js"></script>
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    
+    <title>Futuros Innovadores</title>
+ </head>
+ <body>
+    <header>
+      <div>
+        <img src="../img/fi" alt="logo de la Asociación Futuros Innovadores" id="logo">
+      </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="../paginaRegistro/paginaRegistro.html">Regístrate</a>
+                </li>
+                <li>
+                    <a href="../paginaContacto/paginaContacto.html">Contáctanos</a>
+                </li>
+                <li>
+                    <a href="../paginaNosotros/paginaNosotros.html">Sobre Nosotros</a>
+                </li>
+                <li>
+                  <a href="../paginaActividad/paginaActividad.html">Actividades</a>
+                </li>
+            </ul>
+        </nav>                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
+    </header>
     <main>
-      <form name="f" action="" method="post" onsubmit="return obtenerDatos()">
-        <label for="nombre">Nombres:</label>
-        <input type="text" name="nombre" id="nombre" required>
-        <label for="apellido">Apellidos:</label>
-        <input type="text" name="apellido" id="apellido" required>
-        <label for="dni">Número de identidad:</label>
-        <input type="text" name="dni" id="dni" maxlength="9" pattern="[0-9]{8}[a-zA-z]{1}" required>
-        <label for="email">Correo electrónico:</label>
-        <input type="email" name="email" id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
-        <label for="estadoCivil">Estado Civil:</label>
-        <input type="radio" name="estadoCivil" id="soltero" value="soltero" checked>Soltero
-        <input type="radio" name="estadoCivil" id="casado" value="casado">Casado
-        <input type="radio" name="estadoCivil" id="divorciado" value="divorciado">Divorciado
-        <label for="tlf">Teléfono:</label>
-        <input type="tel" name="tlf" id="tlf" pattern="[0-9]{9}" maxlength="9">
-        
-        <label for="disponibilidad">Disponibilidad:</label>
-        <input type="radio" name="disponibilidad" id="cualquier" onclick="showDiaSemana(false)">Cualquier día
-        <input type="radio" name="disponibilidad" id="diaConcreto" onclick="showDiaSemana(true)">Elegir dias concretos
-        <div id="diaSemana" style="display: none;">
-          <input type="checkbox" name="lunes" id="lunes">
-          <label for="lunes">Lunes</label>
-          <input type="checkbox" name="martes" id="martes">
-          <label for="martes">Martes</label>
-          <input type="checkbox" name="miercoloes" id="miercoloes">
-          <label for="miercoloes">Miércoles</label>
-          <input type="checkbox" name="jueves" id="jueves">
-          <label for="jueves">Jueves</label>
-          <input type="checkbox" name="viernes" id="viernes">
-          <label for="viernes">Viernes</label>
-          <input type="checkbox" name="sabado" id="sabado">
-          <label for="sabado">Sábado</label>
-          <input type="checkbox" name="domingo" id="lunes">
-          <label for="domingo">Domingo</label>
+      <section id="entrante">
+        <p>
+          Si anhelas crecer en un entorno lleno de espíritu innovador, desafíos y colaboración en equipo, la Asociación de Futuros Innovadores es la plataforma que estás buscando. ¡Únete a nosotros y comencemos juntos el viaje hacia la innovación del futuro!
+        </p>
+      </section>
+      <section id="formulario">
+        <form name="f" action="" method="post" onsubmit="return obtenerDatos()">
+          <label for="nombre">Nombres:</label>
+          <input type="text" name="nombre" id="nombre" required>
+          <label for="apellido">Apellidos:</label>
+          <input type="text" name="apellido" id="apellido" required>
+          <label for="dni">Número de identidad:</label>
+          <input type="text" name="dni" id="dni" maxlength="9" pattern="[0-9]{8}[a-zA-z]{1}" required>
+          <label for="email">Correo electrónico:</label>
+          <input type="email" name="email" id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+          <label for="estadoCivil">Estado Civil:</label><br>
+          <input type="radio" name="estadoCivil" id="soltero" value="soltero" checked>Soltero
+          <input type="radio" name="estadoCivil" id="casado" value="casado">Casado
+          <input type="radio" name="estadoCivil" id="divorciado" value="divorciado">Divorciado
+          <label for="tlf">Teléfono:</label>
+          <input type="tel" name="tlf" id="tlf" pattern="[0-9]{9}" maxlength="9">
+          <label for="disponibilidad">Disponibilidad:</label>
+          <input type="radio" name="disponibilidad" id="cualquier" onclick="showDiaSemana(false)">Cualquier día
+          <input type="radio" name="disponibilidad" id="diaConcreto" onclick="showDiaSemana(true)">Elegir dias concretos
+          <div id="diaSemana" style="display: none;">
+            <input type="checkbox" name="lunes" id="lunes">
+            <label for="lunes">Lunes</label>
+            <input type="checkbox" name="martes" id="martes">
+            <label for="martes">Martes</label>
+            <input type="checkbox" name="miercoloes" id="miercoloes">
+            <label for="miercoloes">Miércoles</label>
+            <input type="checkbox" name="jueves" id="jueves">
+            <label for="jueves">Jueves</label>
+            <input type="checkbox" name="viernes" id="viernes">
+            <label for="viernes">Viernes</label>
+            <input type="checkbox" name="sabado" id="sabado">
+            <label for="sabado">Sábado</label>
+            <input type="checkbox" name="domingo" id="lunes">
+            <label for="domingo">Domingo</label>
         </div>
+          <br>  
+          <label for="motivacion">Motivación para entrar</label>
+          <input type="checkbox" name="participar" id="participar">
+          <label for="participar">Participar en actividades</label>
+          <input type="checkbox" name="preparar" id="preparar">
+          <label for="preparar">Preparar actividades</label>
+          <input type="checkbox" name="acompaniar" id="acompaniar">
+          <label for="acompaniar">Acompañar a un menor</label>
+          <input type="checkbox" name="curiosidad" id="curiosidad">
+          <label for="curiosidad">Curiosidad por la asociación</label>
+          <input type="checkbox" name="otraMotivacion" id="otraMotivacion" onclick="mostrarOp()">
+          <label for="otraMotivacion">Otra Motivación</label>
+          <textarea name="otraMotivacion" id="txtMotivacion" cols="30" rows="10" placeholder="Escribir aquí las otras motivaciones..."></textarea>
+          <label for="observacion">Observación</label>
+          <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Escribir algo que desee..."></textarea>
+          <input type="checkbox" name="aceptarCondicion" id="aceptarCondicion" required>
+          <label for="aceptarCondicion">Aceptar las <a href="" target="_blank" rel="condicionesDeAsociacion">condiciones de la asociación</a></label>
+  
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Resetear">
+          
         
-
-        <label for="motivacion">Motivación para entrar</label>
-        <input type="checkbox" name="participar" id="participar">
-        <label for="participar">Participar en actividades</label>
-        <input type="checkbox" name="preparar" id="preparar">
-        <label for="preparar">Preparar actividades</label>
-        <input type="checkbox" name="acompaniar" id="acompaniar">
-        <label for="acompaniar">Acompañar a un menor</label>
-        <input type="checkbox" name="curiosidad" id="curiosidad">
-        <label for="curiosidad">Curiosidad por la asociación</label>
-        <input type="checkbox" name="otraMotivacion" id="otraMotivacion" onclick="mostrarOp()">
-        <label for="otraMotivacion">Otra Motivación</label>
-        <textarea name="otraMotivacion" id="txtMotivacion" cols="30" rows="10" placeholder="Escribir aquí las otras motivaciones..."></textarea>
-        <label for="observacion">Observación</label>
-        <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Escribir algo que desee..."></textarea>
-        <input type="checkbox" name="aceptarCondicion" id="aceptarCondicion" required>
-        <label for="aceptarCondicion">Aceptar las <a href="" target="_blank" rel="condicionesDeAsociacion">condiciones de la asociación</a></label>
-
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Resetear">
-        
+        </form>
+      </section>
       
-      </form>
     </main>
-    <footer></footer>
+    <footer>
+      <p>&copy; Xueting Yang</p>
+      <p><a href="https://site.educa.madrid.org/ies.villablanca.madrid/" target="_blank" >IES Villablanca</a></p>
+      <p><a href="mailto:xueting.yang@educa.madrid.org">Contacto</a></p>
+  </footer>
   </body>
 </html>
