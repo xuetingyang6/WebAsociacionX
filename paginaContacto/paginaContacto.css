@@ -1,1 +1,51 @@
- 
+#entrada {
+    grid-column: 3 / 9;
+    grid-row: 1;
+
+
+}
+
+#localizacion {
+    grid-column: 3 / 9;
+    grid-row: 2;
+}
+
+#contacto {
+    grid-column: 3 / 7;
+    grid-row: 3;
+}
+
+#final{
+    grid-column: 3 / 9;
+    grid-row: 4;
+}
+
+#slogan {
+    grid-column: 4 / 9;
+    grid-row: 5;
+}
+
+article {
+    width: 90%;
+    
+}
+
+article p {
+    margin: 4vh;
+}
+
+#formulario {
+    grid-column: 7 /10;
+    grid-row: 3;
+}
+
+input {
+    background-color: #EFEFEF;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: solid;
+    border-color: #26467e;
+    border-width: 1px;
+
+}
