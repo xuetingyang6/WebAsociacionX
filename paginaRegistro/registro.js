@@ -20,7 +20,7 @@ function showDiaSemana(show){
 }
 
 function showTexarea() {
-    var area=document.getElementById("motivacion");
+    var area=document.getElementById("razonMotivacion");
     var op=document.getElementById("otraMotivacion");
     if(op.checked){
         area.style.display='block';
@@ -29,6 +29,7 @@ function showTexarea() {
         area.style.display='none';
     }
 }
+
 
 function getDato(confirmacion){
 
