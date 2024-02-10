@@ -7,7 +7,6 @@
     grid-column: 3 / 9;
     grid-row: 2;
     margin-bottom: 15vh;
-    
 }
 
 #localizacion {
@@ -23,6 +22,31 @@
 
 #galeria {
     margin-left: 5vw;
+    padding: 10px;
+    position: relative;
+}
+
+.fotoCentro {
+    margin: 10px;
+    width: 500px;
+    height: 335px;
+    position: absolute;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #c9d6ee;
+    border-radius: 10px;
+    box-shadow: 0px 0px 18px 8px rgba(0, 0, 0, 0.2);
+}
+
+#next {
+    position: absolute;
+    background-color: #26467e;
+    color: #c9d6ee;
+    left: 250px;
+    top: 375px;
+    border-radius: 10px;
+    padding-left: 4px;
+
 }
 
 #medio {
@@ -69,12 +93,7 @@ input {
 
 }
 
-.fotoCentro {
-    margin: 10px;
-    width: 500px;
-    position: absolute;
-    z-index: -5;
-}
+
 
 /*
 #galeria {
