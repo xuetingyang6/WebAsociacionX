@@ -52,8 +52,6 @@ function getDato(confirmacion){
     /*
     confirm("Revisar los datos introducido: "+"\nNombre: "+nombre+"\nApellido: "+apellido+"\nDNI: "+dni+"\nNúmero de contacto: "+tlf+"\nCorreo electrónico: "+email);
 */
-
-    
-
-
 }
+
+
