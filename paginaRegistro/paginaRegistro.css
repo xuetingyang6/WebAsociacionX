@@ -33,6 +33,15 @@ label, input {
     margin-bottom: 8px;
 }
 
+#dato {
+    width: 30vw;
+    height: 30vh;
+    background-color: beige;
+    display: none;
+    position: fixed;
+}
+
+
 #boton {
     margin-left: 8vw;
 }
