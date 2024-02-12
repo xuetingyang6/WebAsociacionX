@@ -37,3 +37,14 @@ td {
     border-style: dotted;
     
 }
+
+article img {
+    width: 250px;
+    height: 200px;
+    padding: 10px;
+}
+
+article img:hover {
+    transform: scale(1.1);
+    
+}
