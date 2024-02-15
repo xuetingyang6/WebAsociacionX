@@ -39,8 +39,8 @@ td {
 }
 
 article img {
-    width: 250px;
-    height: 200px;
+    width: 12vw;
+    height: 10vw;
     padding: 10px;
 }
 
@@ -50,7 +50,7 @@ article img:hover {
 }
 
 #primeraImg {
-    width: 900px;
+    width: 48vw;
 }
 
 h1 {
@@ -58,6 +58,6 @@ h1 {
 }
 
 #segundoImg {
-    margin-left: 11vw;
+    margin-left: 8vw;
 }
 
