@@ -6,6 +6,8 @@
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../layout.css">
     <link rel="stylesheet" href="./paginaContacto.css">
+    <script type="text/javaScript" src="./galeria.js"></script>
+    <script type="text/javaScript" src="../paginaRegistro/registro.js"></script>
     
     <title>Futuros Innovadores</title>
  </head>
@@ -32,8 +34,7 @@
                     <a href="../paginaActividad/paginaActividad.html">Actividades</a>
                 </li>
             </ul>
-        </nav>                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-
+        </nav>
     </header>
     <main>
         <section id="entrada">
@@ -43,10 +44,38 @@
             </p>
         </section>
 
-        <section id="localizacion">
+        <section id="fotos">
             <h3>Información de centro</h3>
+            <div id="galeria">
+                <button id="next">Next &#11166;</button>
+                <img src="../img/localidad.png" alt="" class="fotoCentro">
+                <img src="../img/localidad1.png" alt="" class="fotoCentro">
+                <img src="../img/oficina3.png" alt="" class="fotoCentro">
+                <img src="../img/oficina2.png" alt="" class="fotoCentro">
+                <img src="../img/oficina1.png" alt="" class="fotoCentro">
+            </div>
+        </section>
+        <section id="localizacion">
             <p>
-                
+                <b>Dirección de la Sede Principal:</b><br>
+                        Asociación de Futuros Innovadores
+                        Calle Innovación, Número 202
+                        Ciudad Vanguardia, 12345
+                        País Progresia
+            </p>
+            <p id="medio">
+                <b>Dirección de la Sede Principal:</b><br>
+                        Asociación de Futuros Innovadores
+                        Calle Innovación, Número 202
+                        Ciudad Vanguardia, 12345
+                        País Progresia
+            </p>
+            <p>
+                <b>Teléfono de Contacto:</b><br>
+                        (+XX) XXXX-XXXX
+                        <br><br><br>
+                        <b>Horario de Atención:</b> <br>
+                        Lunes a Viernes: <br>9:00 AM - 6:00 PM 
             </p>
         </section>
 
@@ -79,13 +108,13 @@
                 Tu voz es esencial para nosotros. Si tienes preguntas o sugerencias sobre innovación, eventos o la asociación en general, te animamos a que nos contactes en cualquier momento. Tu retroalimentación nos ayudará a mejorar continuamente y a satisfacer mejor las necesidades de los miembros de la asociación.
             </p>
             <br>
-            <form action="" method="get">
+            <form action="../txt.html" method="get">
                 <label for="nombre">Nombres:</label>
                 <input type="text" name="nombre" id="nombre" required><br>
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" size="24" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required><br>
                 <label for="mensaje">Mensaje:</label><br>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribir los mensajes..."></textarea><br>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribir los mensajes..." required></textarea><br>
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Borrar"> 
             </form>

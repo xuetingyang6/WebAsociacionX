@@ -1,28 +1,71 @@
 #entrada {
     grid-column: 3 / 9;
     grid-row: 1;
+}
 
-
+#fotos {
+    grid-column: 3 / 9;
+    grid-row: 2;
+    margin-bottom: 15vh;
 }
 
 #localizacion {
     grid-column: 3 / 9;
-    grid-row: 2;
+    grid-row: 3;
+}
+
+#localizacion p {
+    display: inline-block;
+    width: 30%;
+    margin-top: 30vh;
+}
+
+#galeria {
+    margin-left: 5vw;
+    padding: 10px;
+    position: relative;
+}
+
+.fotoCentro {
+    margin: 10px;
+    width: 500px;
+    height: 335px;
+    position: absolute;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #c9d6ee;
+    border-radius: 10px;
+    box-shadow: 0px 0px 18px 8px rgba(0, 0, 0, 0.2);
+}
+
+#next {
+    position: absolute;
+    background-color: #26467e;
+    color: #c9d6ee;
+    left: 250px;
+    top: 375px;
+    border-radius: 10px;
+    padding-left: 4px;
+
+}
+
+#medio {
+    margin: 0px 30px;
 }
 
 #contacto {
     grid-column: 3 / 7;
-    grid-row: 3;
+    grid-row: 4;
 }
 
 #final{
     grid-column: 3 / 9;
-    grid-row: 4;
+    grid-row: 5;
 }
 
 #slogan {
     grid-column: 4 / 9;
-    grid-row: 5;
+    grid-row: 6;
 }
 
 article {
@@ -36,7 +79,7 @@ article p {
 
 #formulario {
     grid-column: 7 /10;
-    grid-row: 3;
+    grid-row: 4;
 }
 
 input {
@@ -49,3 +92,23 @@ input {
     border-width: 1px;
 
 }
+
+
+
+/*
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.fotoCentro:hover img {
+    transform: scale(1.1);
+}
+
+.fotoCentro img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+*/

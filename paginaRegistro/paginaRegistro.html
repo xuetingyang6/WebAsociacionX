@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../layout.css">
     <link rel="stylesheet" href="./paginaRegistro.css">
     <script type="text/javaScript" src="./registro.js"></script>
+    <script type="text/javaScript" src="./registro.js"></script>
     <title>Futuros Innovadores</title>
  </head>
  <body>
@@ -32,8 +33,7 @@
                   <a href="../paginaActividad/paginaActividad.html">Actividades</a>
                 </li>
             </ul>
-        </nav>                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-
+        </nav>                                                                                                                       
     </header>
     <main>
       <section id="entrante">
@@ -42,7 +42,7 @@
         </p>
       </section>
       <section id="formulario">
-        <form name="f" action="" method="post" onsubmit="return obtenerDatos()">
+        <form action="" method="get" onsubmit="return getDato()">
           <div id="datoBasico">
             <label for="nombre">Nombres:</label>
             <input type="text" name="nombre" id="nombre" required>
@@ -60,7 +60,7 @@
             <input type="tel" name="tlf" id="tlf" pattern="[0-9]{9}" maxlength="9">
           </div>
           
-          <label for="disponibilidad">Disponibilidad:</label><br>
+          <label for="disponibilidad">Disponibilidad:</label><br><br>
           <input type="radio" name="disponibilidad" id="cualquier" onclick="showDiaSemana(false)">Cualquier día
           <input type="radio" name="disponibilidad" id="diaConcreto" onclick="showDiaSemana(true)">Elegir dias concretos
           <div id="diaSemana" style="display: none;">
@@ -90,13 +90,16 @@
             <label for="acompaniar">Acompañar a un menor</label><br>
             <input type="checkbox" name="curiosidad" id="curiosidad">
             <label for="curiosidad">Curiosidad por la asociación</label><br>
-            <input type="checkbox" name="otraMotivacion" id="otraMotivacion" onclick="mostrarOp()">
-            <label for="otraMotivacion">Otra Motivación</label><br>
-            <textarea name="otraMotivacion" id="txtMotivacion" cols="30" rows="10" placeholder="Escribir aquí las otras motivaciones..."></textarea>
+            <input type="checkbox" id="otraMotivacion" onchange="showTexarea()">
+            <label for="otraMotivacion">Otra Motivación</label>
+            <div id="razonMotivacion" style="display: none;">
+              <textarea cols="30" rows="10" placeholder="Escribir aquí las otras motivaciones que no esté en el listado..."></textarea>
+            </div>
           </div>
           <br>
           <label for="observacion">Observación:</label><br>
-          <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Escribir algo que desee..."></textarea><br>
+          <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Escribir algo que desee..."></textarea>
+          
           <div id="aceptarCondicion">
             <input type="checkbox" name="aceptarCondicion" id="aceptarCondicion" required>
             <label for="aceptarCondicion">Aceptar las <a href="" target="_blank" rel="condicionesDeAsociacion">condiciones de la asociación</a></label>
@@ -106,12 +109,49 @@
             <input type="submit" value="Enviar">
             <input type="reset" value="Resetear">
           </div>
-          
-          
-        
         </form>
       </section>
-      
+      <div id="dato">
+        <h3>Datos introducidos:</h3>
+        
+        <p>Confirmar en caso correcto</p>
+        <input type="button" value="Confirmar" onclick="return getDato(true)">
+        <input type="button" value="Cancelar" onclick="return getDato(false)">
+      </div>
+      <section id="ventajas">
+        <h3>Nuestras ventajas absolutas</h3>
+        <p>
+          <ol>
+              <li>Conversa con Líderes del Sector:
+                  <p>
+                      Te alentamos a conectarte con líderes del sector y exitosos empresarios. Participa en nuestras actividades sociales, seminarios profesionales y foros en línea regulares. Tendrás la oportunidad de discutir tendencias futuras, compartir ideas y encontrar inspiración junto a destacados referentes del mundo innovador.
+                  </p>
+              </li>
+              <li>Encuentra Socios para Colaborar:
+                  <p>
+                      Ya sea que busques oportunidades de colaboración interdisciplinaria o compañeros emprendedores con ideas afines, nuestra comunidad es un lugar vibrante. A través de nuestra plataforma, puedes establecer fácilmente conexiones con profesionales de diversos campos, impulsando proyectos innovadores de manera conjunta.
+                  </p>
+
+              </li>
+              <li>
+                  Accede a Recursos Innovadores:
+                  <p>
+                      Como miembro de la asociación, tendrás acceso a recursos únicos de innovación, que incluyen entrenamiento profesional, materiales de investigación y la posibilidad de recibir apoyo financiero para tus proyectos. Nos dedicamos a proporcionarte todo lo necesario para que alcances mayores logros en tu camino innovador.
+                  </p>
+              </li>
+              <li>
+                  Inscripción y Participación en Eventos:
+                  <p>
+                      Explora nuestro sitio web y descubre los emocionantes eventos que tenemos programados. Desde festivales de creadores hasta travesías empresariales, estos eventos no solo son plataformas de aprendizaje, sino también oportunidades ideales para conocer a compañeros apasionados. ¡Bienvenido seas novato o veterano en el mundo de la innovación!
+                  </p>
+              </li>
+              
+          </ol>
+          <p>
+            ¿Tienes dudas? Contáctanos <a href="../paginaContacto/paginaContacto.html#contacto">aquí</a> !
+          </p>
+        </p>
+      </section>
     </main>
     <footer>
       <p>&copy; Xueting Yang</p>

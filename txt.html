@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+        p {
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <h1>Mensaje enviado.</h1>
+        <h2>Gracias por contáctanos</h2><br>
+        En <span id="time">5</span> segundos después volverá a página
+    </p>
+    <script>
+        var seg=5;
+        var time=document.getElementById("time");
+        function showTime(){
+            seg--;
+            if(seg<=0){
+                location.href = "./paginaContacto/paginaContacto.html#contacto";
+            }
+            time.innerHTML=seg+"";
+        }
+        setInterval(showTime,1000);
+    </script>
+</body>
+</html>
