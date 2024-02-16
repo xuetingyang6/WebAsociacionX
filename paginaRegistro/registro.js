@@ -30,8 +30,8 @@ function showTexarea() {
     }
 }
 
-
-function getDato(confirmacion){
+//obtener datos introducidos en los campos
+function getDato(){
 
     var nombre=document.getElementById("nombre").value;
     var apellido=document.getElementById("apellido").value;
@@ -40,18 +40,85 @@ function getDato(confirmacion){
     var tlf=document.getElementById("tlf").value;
 
     var datos=document.getElementById("dato");
+    var txt=document.createElement("p");//crear una etiqueta p
+    txt.setAttribute("id", "mensaje");//add un id para una etiqueta
+    var msg="Nombre: "+nombre+"<br>Apellido: "+apellido+"<br>DNI: "+dni+"<br>Número de contacto: "+tlf+"<br>Correo electrónico: "+email;
+    txt.innerHTML=msg;
+    datos.appendChild(txt);
 
-    var msg="\nNombre: "+nombre+"\nApellido: "+apellido+"\nDNI: "+dni+"\nNúmero de contacto: "+tlf+"\nCorreo electrónico: "+email;
-
-    var textNode = document.createTextNode(msg);
-    //datos.appendChild(msg);
-    datos.appendChild(textNode);
     datos.style.display='block';
 
     return false;
-    /*
-    confirm("Revisar los datos introducido: "+"\nNombre: "+nombre+"\nApellido: "+apellido+"\nDNI: "+dni+"\nNúmero de contacto: "+tlf+"\nCorreo electrónico: "+email);
-*/
 }
 
+//boton Volver
+function omitirDiv(){
+    var div=document.getElementById("dato");
+    var txt=document.getElementById("mensaje");
 
+    div.style.display="none";
+
+    div.removeChild(txt);
+    
+}
+
+//boton Confirmacion
+function enviarDato(){
+    omitirDiv();
+    resetearCampo();
+    alert("Enviado");
+    
+}
+
+//resetear los campos
+function resetearCampo(){
+    document.getElementById("form1").reset();
+}
+
+//validacion de los campos
+function validacion(){
+    var nombre=document.getElementById("nombre").value;
+    var apellido=document.getElementById("apellido").value;
+
+    var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B',
+'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+    var dni=document.getElementById("dni").value;
+
+    var motivacionOp =document.getElementsByClassName("razones");
+    var selected=estaSeleccionado(motivacionOp);
+    
+
+    if(hayAlgo(nombre)&&hayAlgo(apellido)&&dni.charAt(8)==letras[dni.substring(0,8)%23]&&selected){
+        getDato();
+        return false;
+    }
+    else{
+        if(!hayAlgo(nombre)||!hayAlgo(apellido)){
+            alert("Campo del nombre o del apellido está vacío");
+        }
+        if(dni.charAt(8)!=letras[dni.substring(0,8)%23]){
+            alert("Introduzca un dni correcto");
+        }
+        else{
+            alert("No has elegido la motivación");
+        }
+    }
+    return false;
+}
+
+function hayAlgo(valor){
+    if( valor == null || /^\s+$/.test(valor)||valor.length==0){
+        return false;
+    }
+}
+
+function estaSeleccionado(valor){
+    var motivacionOp =document.getElementsByClassName("razones");
+    var seleccionado=false;
+    for(var i=0;i<motivacionOp.length&&!seleccionado;i++){
+        if(motivacionOp[i].checked){
+            seleccionado=true;
+        }
+    }
+    return seleccionado;
+}   
