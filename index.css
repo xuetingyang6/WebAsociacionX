@@ -5,7 +5,7 @@
 
 #introduccion p {
     width: 60%;
-    margin: 2vw 10vw 5vw 10vw;
+    margin: 1vw 10vw;
 }
 
 #contenido {
@@ -37,3 +37,27 @@ td {
     border-style: dotted;
     
 }
+
+article img {
+    width: 12vw;
+    height: 10vw;
+    padding: 10px;
+}
+
+article img:hover {
+    transform: scale(1.1);
+    
+}
+
+#primeraImg {
+    width: 48vw;
+}
+
+h1 {
+    text-align: center;
+}
+
+#segundoImg {
+    margin-left: 8vw;
+}
+
