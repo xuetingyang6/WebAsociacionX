@@ -1,0 +1,56 @@
+section#primer {
+    grid-column: 3 / 9;
+    grid-row: 1;
+    text-align: justify;
+}
+
+section {
+    grid-column: 3 / 9;
+    grid-row: 2;
+}
+
+section#ultimo {
+    grid-column: 4 / 9;
+    grid-row: 3;
+}
+
+article {
+    margin-bottom: 10vh;
+}
+
+button {
+    border-radius: 5px;
+}
+
+
+button img {
+    width: 24px;
+    padding: 5px;
+    
+}
+
+span {
+    font-size: larger;
+}
+
+.contenido {
+    display: none;
+    padding: 4vw;
+}
+
+.mas:hover {
+    color:#0080ff;
+    cursor: pointer;/*icono manita*/
+    text-decoration: underline;
+}
+
+.mas {
+    float: right;
+}
+
+hr {
+    width: 12vw;
+    color: #0d549b;
+    margin-bottom: 12px;
+
+}

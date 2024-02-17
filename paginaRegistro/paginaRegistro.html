@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../layout.css">
     <link rel="stylesheet" href="./paginaRegistro.css">
     <script type="text/javaScript" src="./registro.js"></script>
-    <script type="text/javaScript" src="./registro.js"></script>
+    <script type="text/javaScript" src="./addBoxShadow.js"></script>
     <title>Futuros Innovadores</title>
  </head>
  <body>
@@ -34,6 +34,7 @@
                 </li>
             </ul>
         </nav>                                                                                                                       
+        </nav>                                                                                                                       
     </header>
     <main>
       <section id="entrante">
@@ -42,7 +43,7 @@
         </p>
       </section>
       <section id="formulario">
-        <form action="" method="get" onsubmit="return getDato()">
+        <form action="" method="get" onsubmit="return validacion()" id="form1">
           <div id="datoBasico">
             <label for="nombre">Nombres:</label>
             <input type="text" name="nombre" id="nombre" required>
@@ -60,6 +61,7 @@
             <input type="tel" name="tlf" id="tlf" pattern="[0-9]{9}" maxlength="9">
           </div>
           
+          <label for="disponibilidad">Disponibilidad:</label><br><br>
           <label for="disponibilidad">Disponibilidad:</label><br><br>
           <input type="radio" name="disponibilidad" id="cualquier" onclick="showDiaSemana(false)">Cualquier día
           <input type="radio" name="disponibilidad" id="diaConcreto" onclick="showDiaSemana(true)">Elegir dias concretos
@@ -82,15 +84,15 @@
           <br><br>  
           <div id="motivacion">
             <label for="motivacion">Motivación para entrar:</label><br>
-            <input type="checkbox" name="participar" id="participar">
+            <input type="checkbox" name="participar" id="participar" class="razones">
             <label for="participar">Participar en actividades</label><br>
-            <input type="checkbox" name="preparar" id="preparar">
+            <input type="checkbox" name="preparar" id="preparar" class="razones">
             <label for="preparar">Preparar actividades</label><br>
-            <input type="checkbox" name="acompaniar" id="acompaniar">
+            <input type="checkbox" name="acompaniar" id="acompaniar" class="razones">
             <label for="acompaniar">Acompañar a un menor</label><br>
-            <input type="checkbox" name="curiosidad" id="curiosidad">
+            <input type="checkbox" name="curiosidad" id="curiosidad" class="razones">
             <label for="curiosidad">Curiosidad por la asociación</label><br>
-            <input type="checkbox" id="otraMotivacion" onchange="showTexarea()">
+            <input type="checkbox" id="otraMotivacion" onchange="showTexarea()" class="razones">
             <label for="otraMotivacion">Otra Motivación</label>
             <div id="razonMotivacion" style="display: none;">
               <textarea cols="30" rows="10" placeholder="Escribir aquí las otras motivaciones que no esté en el listado..."></textarea>
@@ -100,23 +102,24 @@
           <label for="observacion">Observación:</label><br>
           <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Escribir algo que desee..."></textarea>
           
+          <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Escribir algo que desee..."></textarea>
+          
           <div id="aceptarCondicion">
-            <input type="checkbox" name="aceptarCondicion" id="aceptarCondicion" required>
+            <input type="checkbox" name="aceptarCondicion" required>
             <label for="aceptarCondicion">Aceptar las <a href="" target="_blank" rel="condicionesDeAsociacion">condiciones de la asociación</a></label>
           </div>
           
           <div id="boton">
             <input type="submit" value="Enviar">
-            <input type="reset" value="Resetear">
+            <input type="reset" value="Borrar">
           </div>
         </form>
       </section>
       <div id="dato">
-        <h3>Datos introducidos:</h3>
-        
-        <p>Confirmar en caso correcto</p>
-        <input type="button" value="Confirmar" onclick="return getDato(true)">
-        <input type="button" value="Cancelar" onclick="return getDato(false)">
+        <h3>Datos de personal introducidos:</h3>
+        <h4>Confirmar en caso correcto</h4>
+        <input type="button" value="Confirmar" id="afirmacion" onclick="enviarDato()">
+        <input type="button" value="Volver" id="cancelar" onclick="omitirDiv()">
       </div>
       <section id="ventajas">
         <h3>Nuestras ventajas absolutas</h3>
@@ -146,9 +149,9 @@
                   </p>
               </li>
               
-          </ol>
-          <p>
-            ¿Tienes dudas? Contáctanos <a href="../paginaContacto/paginaContacto.html#contacto">aquí</a> !
+          </ol><br>
+          <p id="contact">
+            ¿Dudas? <br>Contáctanos <a href="../paginaContacto/paginaContacto.html#contacto">aquí</a> !
           </p>
         </p>
       </section>
