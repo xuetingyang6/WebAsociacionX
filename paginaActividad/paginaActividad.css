@@ -9,6 +9,11 @@ section {
     grid-row: 2;
 }
 
+section#ultimo {
+    grid-column: 4 / 9;
+    grid-row: 3;
+}
+
 article {
     margin-bottom: 10vh;
 }
@@ -26,4 +31,26 @@ button img {
 
 span {
     font-size: larger;
+}
+
+.contenido {
+    display: none;
+    padding: 4vw;
+}
+
+.mas:hover {
+    color:#0080ff;
+    cursor: pointer;/*icono manita*/
+    text-decoration: underline;
+}
+
+.mas {
+    float: right;
+}
+
+hr {
+    width: 12vw;
+    color: #0d549b;
+    margin-bottom: 12px;
+
 }
