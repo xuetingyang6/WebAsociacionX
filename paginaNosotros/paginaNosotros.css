@@ -14,23 +14,44 @@ section#miembro {
     grid-template-columns:repeat(3,1fr);
     grid-gap: 5vh;
     grid-auto-rows: minmax(10px, auto);
+    
 }
 
 #fundadora {
-    grid-column: 2;
+    grid-column: 1/5;
     grid-row: 1;
+    background-color: #EFEFEF
 }
 
 #director {
-    grid-column: 1;
-    grid-row: 1;
+    grid-column: 1/5;
+    grid-row: 2;
+    margin: 4%;
 }
 
 #coordinadora {
-    grid-column: 3;
-    grid-row: 1;
+    grid-column: 1/5;
+    grid-row: 3;
 }
 
-article p {
-    margin-bottom: 5vh;
+article img {
+    display: inline-block;
+    border-radius: 12px;
 }
+article p {
+    display: inline-block;
+    width: 20vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+article {
+    border-radius: 12px;
+    border-color: #EFEFEF;
+    border-width: 2px;
+    border-style: dashed;
+
+}
+
+
+
