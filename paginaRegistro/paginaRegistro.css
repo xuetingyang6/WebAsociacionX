@@ -6,11 +6,17 @@ section#entrante {
 
 section#formulario {
     grid-column: 7 / 10;
+    grid-column: 7 / 10;
     grid-row: 2;
     box-shadow: 2px 2px 18px 12px rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 5px;
 
+}
+
+section#ventajas {
+    grid-column: 3 / 7;
+    grid-row: 2;
 }
 
 section#ventajas {
@@ -36,6 +42,15 @@ section#ventajas {
 label, input {
     margin-bottom: 8px;
 }
+
+#dato {
+    width: 30vw;
+    height: 30vh;
+    background-color: beige;
+    display: none;
+    position: fixed;
+}
+
 
 #dato {
     width: 30vw;

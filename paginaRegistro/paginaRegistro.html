@@ -34,6 +34,7 @@
                 </li>
             </ul>
         </nav>                                                                                                                       
+        </nav>                                                                                                                       
     </header>
     <main>
       <section id="entrante">
@@ -60,6 +61,7 @@
             <input type="tel" name="tlf" id="tlf" pattern="[0-9]{9}" maxlength="9">
           </div>
           
+          <label for="disponibilidad">Disponibilidad:</label><br><br>
           <label for="disponibilidad">Disponibilidad:</label><br><br>
           <input type="radio" name="disponibilidad" id="cualquier" onclick="showDiaSemana(false)">Cualquier día
           <input type="radio" name="disponibilidad" id="diaConcreto" onclick="showDiaSemana(true)">Elegir dias concretos
@@ -98,6 +100,8 @@
           </div>
           <br>
           <label for="observacion">Observación:</label><br>
+          <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Escribir algo que desee..."></textarea>
+          
           <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Escribir algo que desee..."></textarea>
           
           <div id="aceptarCondicion">
