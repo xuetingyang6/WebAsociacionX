@@ -60,8 +60,6 @@
             <label for="tlf">Teléfono:</label>
             <input type="tel" name="tlf" id="tlf" pattern="[0-9]{9}" maxlength="9">
           </div>
-          
-          <label for="disponibilidad">Disponibilidad:</label><br><br>
           <label for="disponibilidad">Disponibilidad:</label><br><br>
           <input type="radio" name="disponibilidad" id="cualquier" onclick="showDiaSemana(false)">Cualquier día
           <input type="radio" name="disponibilidad" id="diaConcreto" onclick="showDiaSemana(true)">Elegir dias concretos
@@ -101,12 +99,9 @@
           <br>
           <label for="observacion">Observación:</label><br>
           <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Escribir algo que desee..."></textarea>
-          
-          <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Escribir algo que desee..."></textarea>
-          
           <div id="aceptarCondicion">
             <input type="checkbox" name="aceptarCondicion" required>
-            <label for="aceptarCondicion">Aceptar las <a href="" target="_blank" rel="condicionesDeAsociacion">condiciones de la asociación</a></label>
+            <label for="aceptarCondicion">Aceptar las <a href="../txt.html" target="_blank" rel="condicionesDeAsociacion">condiciones de la asociación</a></label>
           </div>
           
           <div id="boton">

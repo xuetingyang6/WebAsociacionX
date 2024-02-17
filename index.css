@@ -29,13 +29,19 @@ article {
 }
 
 table {
-    border-style: dashed;
+    border-style: solid;
     border-collapse: collapse;
+    width: 24vw;
+    margin: 10px auto;
+    border-width: 1px;
+    background-color: antiquewhite;
 }
 
-td {
+td,th {
     border-style: dotted;
-    
+    border-width: 1px;
+    padding: 8px;
+    width: 50px;
 }
 
 article img {
@@ -61,3 +67,18 @@ h1 {
     margin-left: 9vw;
 }
 
+tr {
+    position: relative;
+}
+
+td.actividad:hover::after {
+    content: "Más detalles en nuestra página Actividades";
+    position: absolute;
+    top: 50%;
+    background-color: #f1f1f1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-style: italic;
+    font-size: small;
+}
