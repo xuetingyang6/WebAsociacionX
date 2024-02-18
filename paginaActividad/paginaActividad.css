@@ -9,7 +9,7 @@ section {
     grid-row: 2;
 }
 
-section#ultimo {
+#ultimo {
     grid-column: 4 / 9;
     grid-row: 3;
 }

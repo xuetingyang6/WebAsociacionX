@@ -88,18 +88,18 @@ function validacion(){
     var selected=estaSeleccionado(motivacionOp);
     
 
-    if(hayAlgo(nombre)&&hayAlgo(apellido)&&dni.charAt(8)==letras[dni.substring(0,8)%23]&&selected){
+    if(!hayAlgo(nombre)&&!hayAlgo(apellido)&&dni.charAt(8)==letras[dni.substring(0,8)%23]&&selected){
         getDato();
         return false;
     }
     else{
-        if(!hayAlgo(nombre)||!hayAlgo(apellido)){
+        if(hayAlgo(nombre)||hayAlgo(apellido)){
             alert("Campo del nombre o del apellido está vacío");
         }
         if(dni.charAt(8)!=letras[dni.substring(0,8)%23]){
             alert("Introduzca un dni correcto");
         }
-        else{
+        if(!selected){
             alert("No has elegido la motivación");
         }
     }

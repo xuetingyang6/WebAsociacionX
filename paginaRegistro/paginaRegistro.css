@@ -1,4 +1,4 @@
-section#entrante {
+#entrante {
     grid-column: 3 / 9;
     grid-row: 1;
     text-align: justify;
@@ -50,16 +50,6 @@ label, input {
     display: none;
     position: fixed;
 }
-
-
-#dato {
-    width: 30vw;
-    height: 30vh;
-    background-color: beige;
-    display: none;
-    position: fixed;
-}
-
 
 #boton {
     margin-left: 8vw;
