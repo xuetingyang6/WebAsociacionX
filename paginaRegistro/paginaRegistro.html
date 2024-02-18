@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="author" content="xuetingyang">
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../layout.css">
     <link rel="stylesheet" href="./paginaRegistro.css">
     <script type="text/javaScript" src="./registro.js"></script>
@@ -33,17 +33,15 @@
                   <a href="../paginaActividad/paginaActividad.html">Actividades</a>
                 </li>
             </ul>
-        </nav>                                                                                                                       
-        </nav>                                                                                                                       
+        </nav>                                                                                                                      
     </header>
     <main>
-      <section id="entrante">
-        <p>
-          Si anhelas crecer en un entorno lleno de espíritu innovador, desafíos y colaboración en equipo, la Asociación de Futuros Innovadores es la plataforma que estás buscando. ¡Únete a nosotros y comencemos juntos el viaje hacia la innovación del futuro!
-        </p>
-      </section>
+      <p id="entrante">
+        Si anhelas crecer en un entorno lleno de espíritu innovador, desafíos y colaboración en equipo, la Asociación de Futuros Innovadores es la plataforma que estás buscando. ¡Únete a nosotros y comencemos juntos el viaje hacia la innovación del futuro!
+      </p>
       <section id="formulario">
-        <form action="" method="get" onsubmit="return validacion()" id="form1">
+        <h5>Registrarse como miembro</h5><br>
+        <form action="admin@asociacion.org" method="get" onsubmit="return validacion()" id="form1">
           <div id="datoBasico">
             <label for="nombre">Nombres:</label>
             <input type="text" name="nombre" id="nombre" required>
@@ -53,16 +51,21 @@
             <input type="text" name="dni" id="dni" maxlength="9" pattern="[0-9]{8}[a-zA-z]{1}" required>
             <label for="email">Correo electrónico:</label>
             <input type="email" name="email" id="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
-            <label for="estadoCivil">Estado Civil:</label><br>
-            <input type="radio" name="estadoCivil" id="soltero" value="soltero" checked>Soltero
-            <input type="radio" name="estadoCivil" id="casado" value="casado">Casado
-            <input type="radio" name="estadoCivil" id="divorciado" value="divorciado">Divorciado
             <label for="tlf">Teléfono:</label>
             <input type="tel" name="tlf" id="tlf" pattern="[0-9]{9}" maxlength="9">
-          </div>
-          <label for="disponibilidad">Disponibilidad:</label><br><br>
-          <input type="radio" name="disponibilidad" id="cualquier" onclick="showDiaSemana(false)">Cualquier día
-          <input type="radio" name="disponibilidad" id="diaConcreto" onclick="showDiaSemana(true)">Elegir dias concretos
+          </div><br>
+          <label>Estado Civil:</label><br>
+          <input type="radio" name="estadoCivil" id="soltero" value="soltero" checked>
+          <label for="soltero">Soltero</label>
+          <input type="radio" name="estadoCivil" id="casado" value="casado">
+          <label for="casado">Casado</label>
+          <input type="radio" name="estadoCivil" id="divorciado" value="divorciado">
+          <label for="divorciado">Divorciado</label>
+          <label>Disponibilidad:</label><br>
+          <input type="radio" name="disponibilidad" id="cualquier" onclick="showDiaSemana(false)">
+          <label for="cualquier">Cualquier día</label>
+          <input type="radio" name="disponibilidad" id="diaConcreto" onclick="showDiaSemana(true)">
+          <label for="diaConcreto">Elegir dias concretos</label>
           <div id="diaSemana" style="display: none;">
             <input type="checkbox" name="lunes" id="lunes">
             <label for="lunes">Lunes</label><br>
@@ -76,12 +79,12 @@
             <label for="viernes">Viernes</label><br>
             <input type="checkbox" name="sabado" id="sabado">
             <label for="sabado">Sábado</label><br>
-            <input type="checkbox" name="domingo" id="lunes">
+            <input type="checkbox" name="domingo" id="domingo">
             <label for="domingo">Domingo</label>
           </div>
           <br><br>  
-          <div id="motivacion">
-            <label for="motivacion">Motivación para entrar:</label><br>
+          <div>
+            <label>Motivación para entrar:</label><br>
             <input type="checkbox" name="participar" id="participar" class="razones">
             <label for="participar">Participar en actividades</label><br>
             <input type="checkbox" name="preparar" id="preparar" class="razones">
@@ -99,8 +102,8 @@
           <br>
           <label for="observacion">Observación:</label><br>
           <textarea name="observacion" id="observacion" cols="30" rows="10" placeholder="Escribir algo que desee..."></textarea>
-          <div id="aceptarCondicion">
-            <input type="checkbox" name="aceptarCondicion" required>
+          <div>
+            <input type="checkbox" id="aceptarCondicion" name="aceptarCondicion" required>
             <label for="aceptarCondicion">Aceptar las <a href="../txt.html" target="_blank" rel="condicionesDeAsociacion">condiciones de la asociación</a></label>
           </div>
           
@@ -118,37 +121,33 @@
       </div>
       <section id="ventajas">
         <h3>Nuestras ventajas absolutas</h3>
-        <p>
-          <ol>
-              <li>Conversa con Líderes del Sector:
-                  <p>
-                      Te alentamos a conectarte con líderes del sector y exitosos empresarios. Participa en nuestras actividades sociales, seminarios profesionales y foros en línea regulares. Tendrás la oportunidad de discutir tendencias futuras, compartir ideas y encontrar inspiración junto a destacados referentes del mundo innovador.
-                  </p>
-              </li>
-              <li>Encuentra Socios para Colaborar:
-                  <p>
-                      Ya sea que busques oportunidades de colaboración interdisciplinaria o compañeros emprendedores con ideas afines, nuestra comunidad es un lugar vibrante. A través de nuestra plataforma, puedes establecer fácilmente conexiones con profesionales de diversos campos, impulsando proyectos innovadores de manera conjunta.
-                  </p>
+        <ol>
+          <li>Conversa con Líderes del Sector:
+              <p>
+                  Te alentamos a conectarte con líderes del sector y exitosos empresarios. Participa en nuestras actividades sociales, seminarios profesionales y foros en línea regulares. Tendrás la oportunidad de discutir tendencias futuras, compartir ideas y encontrar inspiración junto a destacados referentes del mundo innovador.
+              </p>
+          </li>
+          <li>Encuentra Socios para Colaborar:
+              <p>
+                  Ya sea que busques oportunidades de colaboración interdisciplinaria o compañeros emprendedores con ideas afines, nuestra comunidad es un lugar vibrante. A través de nuestra plataforma, puedes establecer fácilmente conexiones con profesionales de diversos campos, impulsando proyectos innovadores de manera conjunta.
+              </p>
 
-              </li>
-              <li>
-                  Accede a Recursos Innovadores:
-                  <p>
-                      Como miembro de la asociación, tendrás acceso a recursos únicos de innovación, que incluyen entrenamiento profesional, materiales de investigación y la posibilidad de recibir apoyo financiero para tus proyectos. Nos dedicamos a proporcionarte todo lo necesario para que alcances mayores logros en tu camino innovador.
-                  </p>
-              </li>
-              <li>
-                  Inscripción y Participación en Eventos:
-                  <p>
-                      Explora nuestro sitio web y descubre los emocionantes eventos que tenemos programados. Desde festivales de creadores hasta travesías empresariales, estos eventos no solo son plataformas de aprendizaje, sino también oportunidades ideales para conocer a compañeros apasionados. ¡Bienvenido seas novato o veterano en el mundo de la innovación!
-                  </p>
-              </li>
-              
-          </ol><br>
-          <p id="contact">
-            ¿Dudas? <br>Contáctanos <a href="../paginaContacto/paginaContacto.html#contacto">aquí</a> !
-          </p>
-        </p>
+          </li>
+          <li>
+              Accede a Recursos Innovadores:
+              <p>
+                  Como miembro de la asociación, tendrás acceso a recursos únicos de innovación, que incluyen entrenamiento profesional, materiales de investigación y la posibilidad de recibir apoyo financiero para tus proyectos. Nos dedicamos a proporcionarte todo lo necesario para que alcances mayores logros en tu camino innovador.
+              </p>
+          </li>
+          <li>
+              Inscripción y Participación en Eventos:
+              <p>
+                  Explora nuestro sitio web y descubre los emocionantes eventos que tenemos programados. Desde festivales de creadores hasta travesías empresariales, estos eventos no solo son plataformas de aprendizaje, sino también oportunidades ideales para conocer a compañeros apasionados. ¡Bienvenido seas novato o veterano en el mundo de la innovación!
+              </p>
+          </li>
+          
+      </ol><br>
+      <p id="contact">¿Dudas? <br>Contáctanos <a href="../paginaContacto/paginaContacto.html#contacto">aquí</a> !</p>
       </section>
     </main>
     <footer>
